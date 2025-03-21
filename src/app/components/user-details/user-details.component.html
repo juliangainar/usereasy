@@ -1,7 +1,23 @@
 <div class="searchForm">
     <label for="id">Search by id</label>
-    <input type="text" name="id" id="id">
-    <button >Search</button>
+    <input type="text" name="id" id="id" [(ngModel)]="userId">
+    <button (click)="getUserByID()">Search</button>
 </div>
-
+<main>
+    <div class="container">
+      <div *ngFor="let user of user" class="card">
+      <div class="infos">
+          <div class="names">
+              <h3>{{ user.first_name }}</h3>
+              <h2>{{ user.last_name }}</h2>
+            </div>
+            <p>{{user.email}}</p>
+            <p>ID : {{user.id}}</p>
+      </div>  
+         <div class="avatar">
+          <img src="{{user.avatar}}" alt="">
+         </div>
+      </div>
+    </div>
+  </main>
 
