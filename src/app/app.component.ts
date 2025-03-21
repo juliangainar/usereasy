@@ -21,12 +21,13 @@ export class AppComponent {
     email: '',
     first_name: "",
     last_name: "",
-    avatar: ""
+    avatar: "logo.png"
   }
 
   addUser() {
     this.userDisplay = !this.userDisplay;
-    this.userService.addUser(this.newUser);
+    this.userService.addUser({...this.newUser});
+    this.newUser = { id: 0, email: '', first_name: '', last_name: '', avatar: "logo.png" };
 
   }
   switchPopUp(){

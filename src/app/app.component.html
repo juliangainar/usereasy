@@ -24,7 +24,7 @@
   </div>
 </div>
 
-<div class="formContainer" *ngIf="userDisplay" (click)="this.userDisplay = !userDisplay">
+<div class="formContainer" *ngIf="userDisplay">
   <div (click)="switchPopUp()" class="closeButton">
     <H2>X</H2>
   </div>
@@ -37,7 +37,7 @@
     <input type="text" name="first_name" id="first_name" [(ngModel)]="newUser.first_name">
     <label for="last_name">Last Name: </label>
     <input type="text" name="last_name" id="last_name" [(ngModel)]="newUser.last_name">
-    <button (click)="addUser()">Add User</button>
+    <button class="addbutton" (click)="addUser()">Add User</button>
   </div>
 </div>
 
