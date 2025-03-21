@@ -1,0 +1,78 @@
+/* Contenedor principal */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  /* Tarjeta de usuario */
+  .card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 350px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #ddd;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Sección de información */
+  .infos {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  .names h3 {
+    font-size: 18px;
+    color: #444;
+    margin: 0;
+  }
+  
+  .names h2 {
+    font-size: 20px;
+    color: #222;
+    margin: 0;
+  }
+  
+  p {
+    font-size: 14px;
+    color: #666;
+    margin: 4px 0;
+  }
+  
+  /* Imagen de usuario */
+  .avatar {
+    flex-shrink: 0;
+  }
+  
+  .avatar img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: 2px solid #ddd;
+    transition: transform 0.3s ease;
+  }
+
+  
+  /* Responsivo para móviles */
+  @media (max-width: 400px) {
+    .card {
+      flex-direction: column;
+      text-align: center;
+    }
+    .avatar {
+      margin-top: 10px;
+    }
+  }
+  

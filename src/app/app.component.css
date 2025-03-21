@@ -1,0 +1,169 @@
+nav{
+    display: flex;
+    min-width: 100%;
+    min-height: 25%;
+    padding: .5rem;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: lightgray 1px solid;
+}
+
+.logo{
+    padding: .5rem;
+    width: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.logo img{
+    width: 50px;
+}
+.menu{
+    padding: .5rem;
+    margin-right: .5rem;
+    width: 150px;
+    justify-content: center;
+}
+
+.menu ul{
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+}
+.menu ul li{
+    cursor: pointer;
+    transition: .25s;
+}
+.menu ul li:hover{
+    opacity: .5;
+}
+
+.active{
+    opacity: .5;
+}
+/* Contenedor principal */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    border-bottom: #ddd 1px solid;
+    border-top: #ddd 1px solid;
+    padding: 3rem;
+    background-color: #e6e5e5;
+  }
+  
+  /* Tarjeta de usuario */
+  .card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 350px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 3px dotted #ddd;
+    cursor: pointer;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.15);
+
+  }
+  
+  /* Sección de información */
+  .infos {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  .names h3 {
+    font-size: 18px;
+    color: #444;
+    margin: 0;
+  }
+  
+  .names h2 {
+    font-size: 20px;
+    color: #222;
+    margin: 0;
+  }
+  
+  p {
+    font-size: 14px;
+    color: #666;
+    margin: 4px 0;
+  }
+  
+  /* Imagen de usuario */
+  .avatar {
+    flex-shrink: 0;
+  }
+  
+  .avatar img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: 2px solid #ddd;
+    transition: transform 0.3s ease;
+  }
+
+  
+  /* Responsivo para móviles */
+  @media (max-width: 400px) {
+    .card {
+      flex-direction: column;
+      text-align: center;
+    }
+    .avatar {
+      margin-top: 10px;
+    }
+  }
+  
+  /* New User form*/
+.formContainer{
+  background-color: rgba(37, 109, 241, 0.5);
+  position: absolute;
+  z-index: 3;
+  top: 0;
+  left: 0;
+  min-height: 100%;
+  min-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.formContainer .closeButton{
+  position: absolute;
+  top: 210px;
+  right: 280px;
+  color: #fff;
+  background-color: black;
+  padding: .25rem;
+  border-radius: 15%;
+  cursor: pointer;
+  transition: .5s ease;
+
+}
+
+.formContainer .closeButton:hover{
+  transform: scaleX(1.1);
+  transform: rotate(5deg);
+}
+
+.newUserForm{
+  background-color: #ffff;
+  display: flex;
+  flex-direction: column;
+  padding: 5rem;
+  border-radius: 8%;
+}
+.newUserForm label{
+  padding: 1rem;
+}
